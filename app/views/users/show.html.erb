@@ -1,0 +1,12 @@
+<h2><%= @user.email %></h2>
+<h2><%= @user.name %></h2>
+
+<dl>
+	<% @user.articles.each do |article| %>
+	<dt>article</dt><dd><%= article.body %></dd>
+	<% end %>
+</dl>
+
+<%= link_to "New Article", new_user_article_path(@user_id) %>
+
+<%= link_to "Articles", articles_path %>

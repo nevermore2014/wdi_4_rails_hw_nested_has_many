@@ -1,0 +1,8 @@
+Articles
+
+<ul>
+<% @articles.each do |article| %>
+	<li><%= article.title %> | <%= link_to 'show', article_path(article.id) %> | <%= article.body %></li>
+<% end %>
+
+</ul>

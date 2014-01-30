@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
 	before_action :get_user
 
 	def index
-		@articles = Article.all?
+		@articles = Article.all
 	end
 
 	def show
@@ -28,5 +28,5 @@ class ArticlesController < ApplicationController
 	def get_user
 		@user = User.find(params[:user_id]) if params.key?(:user_id)
 	end
-	
+
 end

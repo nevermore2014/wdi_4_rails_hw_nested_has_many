@@ -1,0 +1,13 @@
+<h2><%= @article.title %></h2>
+<h3><%= @article.body %></h3>
+
+
+<dl>
+	<% @article.comments.each do |comment| %>
+	<dt>Comment</dt><dd><%= comment.body %></dd>
+	<% end %>
+</dl>
+
+<%= link_to "New Comment", new_article_comment_path(@article.id) %>
+
+<%= link_to "Article", article_path %>

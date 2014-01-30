@@ -10,12 +10,12 @@ class CommentsController < ApplicationController
 	end
 
 	def new
-		@comment = comment.new
+		@comment = Comment.new
 	end
 
 	def create
 		@article.comments << Comment.create!(comments_params)
-		recirect_to article_path(@article.id)
+		redirect_to article_path(@article.id)
 	end
 
 	private
@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
 	end
 
 	def get_article
-		@article = Article.find(params[:article_id]) if params.key?(article_id)
+		@article = Article.find(params[:article_id]) if params.key?(:article_id)
 	end
 
 end
