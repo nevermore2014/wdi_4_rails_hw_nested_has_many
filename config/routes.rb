@@ -6,9 +6,10 @@ SharedBlog::Application.routes.draw do
   end
 
   resources :articles do
-    resources :comments
+      resources :comments
   end
 
+  get '/users' => 'users#index'
 
   root 'articles#index'
 

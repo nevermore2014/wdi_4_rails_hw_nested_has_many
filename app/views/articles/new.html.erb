@@ -1,0 +1,5 @@
+<%= form_for @article do |f| %>
+	<dt>title: </dt><dd><%= f.text_area :title %></dd>
+	<dt>body: </dt><dd><%= f.text_area :body %></dd>
+<%= f.submit value = "Enter Comment" %>
+<% end %>

@@ -1,0 +1,6 @@
+
+<%= form_for @user do |f| %>
+	<dt>email address: </dt><dd><%= f.text_area :email %></dd>
+	<dt>name: </dt><dd><%= f.text_area :name %></dd>
+<%= f.submit value = "Enter Comment" %>
+<% end %>
